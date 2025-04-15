@@ -376,22 +376,58 @@ class ChargeView extends HookConsumerWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text('Do you want to delete this item?'),
+                  const Icon(
+                    Icons.check,
+                    color: Colors.blueGrey,
+                    size: 120,
+                  ),
+                  const Text(
+                    '充電を開始しました',
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.blueGrey,
+                        fontWeight: FontWeight.bold),
+                  ),
                   const SizedBox(height: 20),
+                  Container(
+                    width: 200,
+                    child: Image.asset('assets/images/doutor.png'),
+                  ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    'アイスコーヒー一杯無料',
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.blueGrey,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    '2022.8.1(月)〜2022.10.31(月)',
+                    style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.blueGrey,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    '１回の提示でおひとりさま１回ご利用いただけます',
+                    style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.blueGrey,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
-                        child: const Text('Yes'),
-                      ),
-                      ElevatedButton(
                         onPressed: () => Navigator.of(context)
                             .popUntil((route) => route.isFirst),
-                        child: Text('No'),
+                        child: Text('今までにGETしたクーポンをみる'),
                         style: ElevatedButton.styleFrom(
-                            foregroundColor: Colors.red,
-                            backgroundColor: Colors.green[100]),
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.blueGrey),
                       ),
                     ],
                   ),
